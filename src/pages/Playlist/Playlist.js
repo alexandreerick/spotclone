@@ -157,6 +157,7 @@ function Playlist() {
             },
           });
 
+          console.log('LAIS: ', userInfo.data);
           setUserData(userInfo.data);
           setLoadingUserData(false);
         } else {
@@ -164,6 +165,8 @@ function Playlist() {
           history.push('/');
         }
       } catch (error) {
+        console.log('ERRO CATCH: ', error);
+        console.log('ERRO CATCH RESPONSE: ', error.response);
         toast.error('Sessão expirada! Faça login novamente', {
           position: 'bottom-center',
         });
@@ -195,10 +198,13 @@ function Playlist() {
                 rel="noreferrer"
                 href={userData.external_urls.spotify}
               >
-                <img
-                  src={userData.images[0].url}
-                  alt={`Foto de ${userData.display_name}`}
-                />
+                {userData.images.length ? (
+
+                  <img
+                    src={userData.images[0].url}
+                    alt={`Foto de ${userData.display_name}`}
+                  />
+                ) : null}
               </a>
               <h2>{`Olá, ${userData.display_name}`}</h2>
             </S.ProfileContainer>
