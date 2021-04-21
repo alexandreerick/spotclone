@@ -109,8 +109,6 @@ function Playlist() {
         }
       );
 
-      console.log('RESPONSE PLAYLIST: ', response.data);
-
       const dataTracks = {
         uris: tracksId,
       };
@@ -124,7 +122,6 @@ function Playlist() {
           },
         }
       );
-      console.log('ADICIONOU: ', addTracks.data);
       setLoadingCreatePlaylist(false);
       setPlaylistLink('');
       setPlaylistName('');
@@ -138,7 +135,6 @@ function Playlist() {
       toast.error('Ocorreu algum erro!', {
         position: 'bottom-center',
       });
-      console.log('DEU ERRO: ', error);
     }
   };
 
