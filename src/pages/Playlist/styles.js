@@ -20,6 +20,10 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* @media (max-width: 640px) {
+    flex-direction: column;
+  } */
 `;
 
 export const ContentContainer = styled.div`
@@ -52,6 +56,16 @@ export const ProfileContainer = styled.div`
   h2 {
     font-size: 2rem;
   }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    padding-left: 0px;
+
+    img {
+      margin-bottom: 18px;
+      margin-right: 0px;
+    }
+  }
 `;
 
 export const LoadingContainer = styled.div`
@@ -72,6 +86,7 @@ export const LeaveButton = styled.button`
   border: none;
   color: #fff;
   font-weight: 700;
+  outline: none;
 
   :hover {
     background-color: #a10d25;

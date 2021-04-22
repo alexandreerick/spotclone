@@ -157,7 +157,6 @@ function Playlist() {
             },
           });
 
-          console.log('LAIS: ', userInfo.data);
           setUserData(userInfo.data);
           setLoadingUserData(false);
         } else {

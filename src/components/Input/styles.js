@@ -14,4 +14,9 @@ export const TInput = styled.input`
   }
 
   padding: 0 6px;
+
+
+  @media (max-width: 640px) {
+    min-width: 100%;
+  }
 `;
